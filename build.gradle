@@ -21,5 +21,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-mail')
 	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
+	// https://mvnrepository.com/artifact/javax.persistence/persistence-api
+	compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
