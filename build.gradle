@@ -20,7 +20,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator:2.1.0.RELEASE')
 	compile('org.springframework.security.oauth:spring-security-oauth2:2.3.4.RELEASE')
 	compile('com.googlecode.json-simple:json-simple:1.1')
-	compile('javax.mail:mail:1.4.1')
+	compile('org.springframework.boot:spring-boot-starter-mail')
 	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

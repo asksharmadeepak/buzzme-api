@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.mail.MessagingException;
+
 @Controller
 public class SendMailController {
 
@@ -18,8 +20,8 @@ public class SendMailController {
     @RequestMapping(EndPoints.SEND_MAIL)
     @ResponseBody
     @CrossOrigin(origins = "http://localhost:4200")
-    public void getAirportDetails(@RequestParam(required = false) String mailId,
-                                  @RequestParam(required = false) String payload) {
+    public void sendMailTo(@RequestParam(required = false) String mailId,
+                                  @RequestParam(required = false) String payload) throws MessagingException {
         mailServiceImpl.sendNotificationOnMail(mailId, payload);
     }
 }
