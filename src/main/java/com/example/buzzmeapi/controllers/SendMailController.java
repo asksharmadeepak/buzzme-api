@@ -20,8 +20,9 @@ public class SendMailController {
     @RequestMapping(EndPoints.SEND_MAIL)
     @ResponseBody
     @CrossOrigin(origins = "http://localhost:4200")
-    public void sendMailTo(@RequestParam(required = false) String mailId,
+    public String sendMailTo(@RequestParam(required = false) String mailId,
                                   @RequestParam(required = false) String payload) throws MessagingException {
         mailServiceImpl.sendNotificationOnMail(mailId, payload);
+        return "Email sent successfully";
     }
 }
